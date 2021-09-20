@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/gedir/ontologies/2021/3/untitled-ontology-6"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/gedir/ontologies/2021/3/untitled-ontology-6">
+    <Prefix name="" IRI="http://www.semanticweb.org/gedir/ontologies/2021/3/untitled-ontology-6#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Environment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Navy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SeaCurrent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tide"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Water"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wind"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Dock"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DraftAft"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DraftEbb"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DraftFlood"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#DraughtForward"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#TimeEbb"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#TimeFlood"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#VelocityCurrent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#VelocityWind"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#SeaCurrent"/>
+        <Class IRI="#Water"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tide"/>
+        <Class IRI="#Water"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Water"/>
+        <Class IRI="#Environment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind"/>
+        <Class IRI="#Environment"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Dock"/>
+        <Class IRI="#Navy"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Dock"/>
+        <Class IRI="#Pier"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Dock"/>
+        <DataMaxCardinality cardinality="20">
+            <DataProperty IRI="#VelocityCurrent"/>
+            <Datatype abbreviatedIRI="owl:rational"/>
+        </DataMaxCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Dock"/>
+        <DataMaxCardinality cardinality="2">
+            <DataProperty IRI="#VelocityWind"/>
+            <Datatype abbreviatedIRI="owl:rational"/>
+        </DataMaxCardinality>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DraftAft"/>
+        <Class IRI="#Navy"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DraftEbb"/>
+        <Class IRI="#Pier"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DraftFlood"/>
+        <Class IRI="#Pier"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DraughtForward"/>
+        <Class IRI="#Navy"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#TimeEbb"/>
+        <Class IRI="#Pier"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#TimeEbb"/>
+        <Class IRI="#Tide"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#TimeFlood"/>
+        <Class IRI="#Pier"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#TimeFlood"/>
+        <Class IRI="#Tide"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#VelocityCurrent"/>
+        <Class IRI="#SeaCurrent"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#VelocityWind"/>
+        <Class IRI="#Wind"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#DraftAft"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#DraftEbb"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#DraftFlood"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#DraughtForward"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#TimeEbb"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#TimeFlood"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#VelocityCurrent"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#VelocityWind"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
